@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GulaCek — Panduan Minuman Bermerek untuk Penderita Diabetes</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="gulacek.css">
+</head>
+<body>
+
+  
+  <header>
+    <div class="logo">Gula<em>Cek</em></div>
+    <p class="tagline">Panduan Minuman Bermerek untuk Penderita Diabetes</p>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-n" id="totalCount">0</div>
+        <div class="stat-l">Total Minuman</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n" id="safeCount" style="color:#4ade80">0</div>
+        <div class="stat-l">Aman</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n" id="cautionCount" style="color:#fb923c">0</div>
+        <div class="stat-l">Hati-hati</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n" id="dangerCount" style="color:#f87171">0</div>
+        <div class="stat-l">Hindari</div>
+      </div>
+    </div>
+    <div class="search-box">
+      <input type="text" id="q" placeholder="Cari merek... (Aqua, Nescafé, Sosro, Kopiko, Ale-Ale...)" oninput="render()">
+    </div>
+  </header>
+
+
+  <div class="filter-bar">
+    <button class="fbtn active" onclick="setF('all', this)">Semua</button>
+    <button class="fbtn s"      onclick="setF('safe', this)">✓ Aman</button>
+    <button class="fbtn c"      onclick="setF('caution', this)">⚠ Hati-hati</button>
+    <button class="fbtn d"      onclick="setF('danger', this)">✕ Hindari</button>
+  </div>
+
+ 
+  <div class="cat-bar" id="catBar"></div>
+
+
+  <main>
+    <div class="legend">
+      <strong>Keterangan:</strong>
+      <span class="li"><span class="dot s"></span>Aman dikonsumsi</span>
+      <span class="li"><span class="dot c"></span>Konsumsi terbatas</span>
+      <span class="li"><span class="dot d"></span>Sebaiknya dihindari</span>
+      <span class="legend-note">*Kadar gula per sajian sesuai label kemasan</span>
+    </div>
+
+    <p class="result-count" id="resultCount"></p>
+    <div class="grid" id="grid"></div>
+
+    <div class="empty" id="empty">
+      <div class="big">🔍</div>
+      <p>Minuman tidak ditemukan.</p>
+    </div>
+  </main>
+
+  
+  <footer>
+    GulaCek — Data kadar gula berdasarkan label kemasan resmi. Bersifat edukatif.
+    Konsultasikan dengan dokter atau ahli gizi untuk panduan diet personal.
+  </footer>
+
+  <script src="gulacek.js"></script>
+</body>
+</html>
