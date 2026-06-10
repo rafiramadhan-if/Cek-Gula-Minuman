@@ -1,6 +1,6 @@
 // ═══════════════════════════════════════════════════
 // DATA MINUMAN
-// ═══════════════════════════════════════════════════
+
 const data = [
   // AIR MINERAL
   { name:"Aqua", brand:"Danone — Air Mineral", icon:"💧", bg:"#e8f4fd", sugar:0, max:50, status:"safe", gi:"GI: 0", kal:"0 kkal", serving:"600ml", cat:"Air Mineral", desc:"Pilihan terbaik dan paling aman. Air mineral murni tanpa gula, kalori, atau bahan tambahan apapun." },
